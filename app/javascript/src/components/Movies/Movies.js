@@ -9,7 +9,6 @@ const Movies = () => {
     .then(res => {
       setMovies(res.data.data)
       console.log(movies)
-      console.log("te amo sami ❤ ")
     } )
     .catch(err => console.log(err))
   },[movies.length])
@@ -20,8 +19,8 @@ const Movies = () => {
 
   return (
       <Fragment> 
-      <h1>Esta son las peliculas listas</h1>
-      <ul>{list}</ul>
+        <h1>Esta son las peliculas listas</h1>
+        <ul>{list}</ul>
       </Fragment>
     
   )
