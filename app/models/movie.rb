@@ -10,7 +10,7 @@ class Movie < ApplicationRecord
     def avg_score
         return 0 unless reviews.count.positive?
 
-        reviews.average(:score).round(2).to_f
+        (reviews.sum(:score).to_f / reviews.count.to_f).to_f
     end
 
 end
